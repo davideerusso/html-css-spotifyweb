@@ -57,6 +57,8 @@ a {
   width: var(--sidebar-width);
   height: calc(100vh - var(--player-height));
   background-color: black;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 .main-content {
   width: calc(100vw - var(--sidebar-width));
@@ -66,6 +68,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 .icon-top {
   display: flex;
@@ -75,15 +78,87 @@ a {
 .icon-spotify {
   color: white;
   font-size: 26px;
-  padding-top: 4px;
 }
 .icon {
   color: white;
   font-size: 18px;
   padding-top: 10px;
 }
+
+.icon-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .icon-download {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
+  text-align: center;
+
+  border: 0.5px solid white;
+  border-radius: 50%;
+
   color: white;
-  font-size: 18px;
-  padding-top: 10px;
+  font-size: 5px;
+}
+.icon-user {
+  color: white;
+  font-size: 22px;
+  padding-top: 20px;
+}
+.none {
+  display: none;
+}
+
+/* META VISUAL */
+@media screen and (min-width: 500px) {
+  :root {
+    --sidebar-width: 180px;
+  }
+  .bar-flex {
+    align-items: start;
+    justify-content: space-between;
+    padding-left: 18px;
+  }
+  .icon-top {
+    align-items: start;
+  }
+  .icon-spotify {
+    color: white;
+    font-size: 32px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .none {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .icon-spotify .none {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .icon {
+    color: grey;
+    font-size: 18px;
+    padding-top: 10px;
+  }
+  .Scritta-hover {
+    position: relative;
+  }
+  .Scritta-hover:hover .hover-icon {
+    display: inline-block;
+  }
+  .icon-white {
+    display: none;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 9px;
+  }
 }
