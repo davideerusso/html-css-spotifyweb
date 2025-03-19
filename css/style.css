@@ -88,7 +88,7 @@ a {
 .icon-down {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
 }
 .icon-download {
   display: inline-block;
@@ -111,9 +111,42 @@ a {
 .none {
   display: none;
 }
+.icon-white {
+  display: none;
+}
+.playlist {
+  margin-top: 15px;
+}
+.title {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+.button-plus {
+  background-color: grey;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  border: none;
+}
+.btn-playlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.list {
+  padding-bottom: 15px;
+  margin-left: -10px;
+}
+.icon-install {
+  display: flex;
+  align-items: center;
+}
 
 /* META VISUAL */
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 639px) {
   :root {
     --sidebar-width: 180px;
   }
@@ -136,6 +169,7 @@ a {
     font-size: 12px;
     font-weight: bold;
   }
+
   .icon-spotify .none {
     display: inline-block;
     font-size: 22px;
@@ -146,7 +180,7 @@ a {
   .icon {
     color: grey;
     font-size: 18px;
-    padding-top: 10px;
+    padding-top: 5px;
   }
   .Scritta-hover {
     position: relative;
@@ -159,6 +193,57 @@ a {
     color: white;
     position: absolute;
     left: 0;
-    top: 9px;
+    top: 4px;
+  }
+
+  .playlist-grp:hover .play-hover {
+    display: block;
+  }
+  .playlist-white {
+    display: none;
+    color: white;
+  }
+  .text {
+    color: grey;
+    font-weight: bold;
+    text-align: center;
+  }
+  .play {
+    padding-left: 8px;
+    color: grey;
+    font-weight: bold;
+    text-align: center;
+  }
+  .install {
+    color: grey;
+    font-size: 10px;
+    padding-left: 8px;
+  }
+  .icon-download {
+    border: 0.5px solid grey;
+
+    color: grey;
+  }
+
+  .icon-install {
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;
+    padding-right: 20px;
+    width: 140px;
+  }
+  .icon-user {
+    color: grey;
+    padding-top: 0px;
+
+    font-size: 22px;
+  }
+  .user-flex {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .User-name {
+    color: white;
+    padding-left: 5px;
   }
 }
