@@ -69,26 +69,36 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  overflow: auto;
 }
 .icon-top {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.icon-spotify {
+.logo-small {
+  height: 26px;
+}
+.logo {
+  display: none;
+}
+/* .icon-spotify {
   color: white;
   font-size: 26px;
-}
+} */
 .icon {
   color: white;
   font-size: 18px;
   padding-top: 10px;
 }
-
+.icon-dim {
+  height: 22px;
+}
 .icon-down {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  /* align-items: start; */
+  align-items: center;
 }
 .icon-download {
   display: inline-block;
@@ -145,6 +155,61 @@ a {
   align-items: center;
 }
 
+/* FOOTER */
+#slide-music {
+  background-color: #292929ff;
+}
+.slide-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.artist {
+  width: calc(100% / 3);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.artist-album {
+  width: 200px;
+  height: 50px;
+}
+.icon-album {
+  width: 50px;
+  height: 50px;
+}
+.controll {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% / 3);
+  height: 100%;
+}
+.slider {
+  width: 100%;
+  height: 50px;
+  width: 100%;
+}
+.button-slider {
+  height: 50px;
+  width: 150px;
+}
+.audio-controll {
+  width: calc(100% / 3);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider-audio {
+  width: 60%;
+  height: 50px;
+}
+.button-audio {
+  width: 40%;
+  height: 50px;
+}
+
 /* META VISUAL */
 @media screen and (min-width: 639px) {
   :root {
@@ -153,7 +218,7 @@ a {
   .bar-flex {
     align-items: start;
     justify-content: space-between;
-    padding-left: 18px;
+    /* padding-left: 18px; */
     overflow: auto;
   }
   .icon-top {
@@ -166,36 +231,41 @@ a {
     padding-bottom: 10px;
   }
   .none {
-    display: inline-block;
+    display: flex;
     font-size: 12px;
     font-weight: bold;
   }
 
-  .icon-spotify .none {
+  /* .icon-spotify .none {
     display: inline-block;
     font-size: 22px;
     font-weight: bold;
     text-align: center;
+  } */
+  .logo-small {
+    display: none;
+  }
+  .logo {
+    display: block;
+    height: 32px;
+    padding-left: 16px;
   }
 
   .icon {
     color: grey;
     font-size: 18px;
-    padding-top: 5px;
+    /* padding-top: 5px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 0;
   }
-  .Scritta-hover {
-    position: relative;
-  }
+
   .menu:hover .icon {
     color: white;
+    /* border-left: 3px solid #abff2eff; */
   }
-  .icon-white {
-    display: none;
-    color: white;
-    position: absolute;
-    left: 0;
-    top: 4px;
-  }
+
   .list:hover {
     color: white;
   }
@@ -206,7 +276,25 @@ a {
   .btn-playlist:hover .play {
     color: white;
   }
-
+  .active {
+    border-left: 3px solid #abff2eff;
+  }
+  .home {
+    padding-left: 13px;
+  }
+  .cerca {
+    padding-left: 16px;
+  }
+  .libre {
+    padding-left: 16px;
+  }
+  .playlist {
+    padding-left: 16px;
+    overflow: hidden;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+  }
   .playlist:hover .play-hover {
     display: block;
   }
@@ -218,6 +306,7 @@ a {
     color: grey;
     font-weight: bold;
     text-align: center;
+    overflow: hidden;
   }
   .play {
     padding-left: 8px;
@@ -229,6 +318,12 @@ a {
     color: grey;
     font-size: 10px;
     padding-left: 8px;
+  }
+  .icon-down {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 16px;
   }
   .icon-download {
     border: 0.5px solid grey;
