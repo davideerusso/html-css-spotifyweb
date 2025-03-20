@@ -164,9 +164,9 @@ a {
   justify-content: space-between;
 }
 .artist {
-  /* max-width: 180px; */
+  width: 30%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 10px;
 }
@@ -230,6 +230,11 @@ a {
 .slider {
   width: 100%;
   height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  padding-bottom: 10px;
 }
 .button-slider {
   height: 50px;
@@ -241,26 +246,45 @@ a {
 .slider-intern {
   width: 20%;
   height: 3px;
-  background-color: white;
+  background-color: lightgray;
 }
 .slider-estern {
   height: 3px;
   background-color: grey;
+  width: 100%;
+  margin: 0 10px;
+  min-width: 70px;
+}
+.time {
+  font-size: 10px;
+  color: white;
+  font-weight: bold;
 }
 .audio-controll {
-  width: calc(100% / 3);
+  width: 30%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  color: white;
+  font-size: 12px;
 }
 .slider-audio {
-  width: 60%;
-  height: 50px;
+  width: 40%;
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .button-audio {
-  width: 40%;
-  height: 50px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.icon-audio {
+  font-size: 10px;
+  padding-right: 12px;
 }
 
 /* META VISUAL */
@@ -404,5 +428,36 @@ a {
   .User-name {
     color: white;
     padding-left: 5px;
+  }
+  .audio-controll {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 878px) {
+  .icon-album {
+    height: 50px;
+    color: grey;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 10px;
+  }
+  .icon-album-size {
+    padding-left: 10px;
+  }
+
+  .artist-album {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
   }
 }
