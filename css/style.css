@@ -438,6 +438,65 @@ a {
     color: white;
     font-size: 12px;
   }
+
+  /* HOVER */
+
+  .artist-album:hover .hover-linee {
+    color: white;
+    border-bottom: 1px solid white;
+  }
+  .hover-icon-heart:hover {
+    color: white;
+  }
+  .hover-icon-folder:hover {
+    color: white;
+  }
+  .button-slider:hover .icon-controll-play {
+    color: white;
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    line-height: 24px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 20px;
+  }
+  .slider:hover .slider-intern {
+    background-color: #abff2eff;
+  }
+  .slider:hover .cerchietto {
+    display: block;
+  }
+  .cerchietto {
+    background-color: white;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    position: absolute;
+    /* right: 10px; */
+    /* top: 10px; */
+    right: 950px;
+    display: none;
+  }
+  .slider-audio:hover .slider-intern {
+    background-color: #abff2eff;
+  }
+  .slider-audio:hover .cerchietto-little {
+    display: block;
+  }
+  .cerchietto-little {
+    background-color: white;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    position: absolute;
+    /* right: 10px; */
+    /* top: 10px; */
+    right: 130px;
+    display: none;
+  }
 }
 
 @media screen and (min-width: 878px) {
