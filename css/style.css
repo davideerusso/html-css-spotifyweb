@@ -267,8 +267,8 @@ a {
   font-size: 12px;
 }
 .slider-audio {
-  width: 40%;
-  height: 30px;
+  /* width: 40%;
+  height: 30px; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -321,6 +321,7 @@ a {
   padding: 0 10px;
   font-weight: bold;
   font-size: 12px;
+  line-height: 40px;
 }
 .main-playlist {
   display: flex;
@@ -338,6 +339,7 @@ a {
   padding: 5px;
 }
 .album-main {
+  display: block;
 }
 .container-card {
   display: flex;
@@ -370,11 +372,16 @@ a {
 .circle {
   border-radius: 50%;
 }
+.linee-green {
+  position: relative;
+}
 .linee-green::after {
+  position: absolute;
+  left: calc((100% - 25%) / 2);
+  bottom: -7px;
   content: "";
-  border: 3px solid #abff2eff;
-  width: 50px;
-  border-bottom: 3px solid #abff2eff;
+  border: 1px solid #abff2eff;
+  width: 25%;
   display: inline-block;
 }
 /* .linee-green {
@@ -612,6 +619,7 @@ a {
     width: 100%;
     height: 100%;
     z-index: 10;
+    overflow: hidden;
   }
   .hover-play {
     position: absolute;
@@ -635,6 +643,21 @@ a {
   }
   .hover-white:hover {
     color: white;
+  }
+  .card-main:hover .hover-grey-circle {
+    display: block;
+    object-fit: cover;
+  }
+  .hover-grey-circle {
+    display: none;
+    background-color: #00000096;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    overflow: hidden;
+    border-radius: 50%;
+    object-fit: cover;
   }
 }
 
