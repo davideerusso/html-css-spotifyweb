@@ -310,16 +310,28 @@ a {
   background-color: #141821ff;
 }
 .menu-main {
-  height: 20px;
+  /* height: 20px; */
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.title-menu {
+  color: grey;
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 12px;
 }
 .main-playlist {
   display: flex;
   flex-direction: column;
 }
+.title-subtit {
+  padding-left: 21px;
+  padding-top: 30px;
+}
 .main-title-section {
   color: white;
-  padding-bottom: 20px;
-  padding-left: 21px;
 }
 .card-main {
   width: calc(100% / 2);
@@ -339,6 +351,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-items: center;
+  text-align: center;
 }
 .main-title-album {
   color: white;
@@ -351,7 +364,12 @@ a {
   font-weight: bold;
   padding-top: 10px;
 }
-
+.title-subtit .main-title-section {
+  padding-bottom: 8px;
+}
+.circle {
+  border-radius: 50%;
+}
 /* META VISUAL */
 @media screen and (min-width: 639px) {
   :root {
@@ -566,6 +584,21 @@ a {
     margin: 0 10px;
     position: relative;
   }
+  /* HOVER MAIN */
+  .card-main:hover .hover-grey {
+  }
+  .hover-grey-relative {
+    position: relative;
+  }
+  .hover-grey {
+    background-color: grey;
+    height: 10px;
+    width: 10px;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    z-index: 10;
+  }
 }
 
 @media screen and (min-width: 878px) {
@@ -592,6 +625,12 @@ a {
   /* MAIN */
   .card-main {
     width: calc(100% / 4);
+    padding: 5px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .card-main {
+    width: calc(100% / 6);
     padding: 5px;
   }
 }
