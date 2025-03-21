@@ -63,6 +63,7 @@ a {
 .main-content {
   width: calc(100vw - var(--sidebar-width));
   height: calc(100vh - var(--player-height));
+  overflow: scroll;
 }
 .bar-flex {
   display: flex;
@@ -182,6 +183,7 @@ a {
 .info-artist-slide {
   padding-left: 5px;
   margin-right: 5px;
+  overflow: hidden;
 }
 .slide-Title-song {
   font-size: 10px;
@@ -249,6 +251,7 @@ a {
   margin: 0 10px;
   min-width: 70px;
 }
+
 .time {
   font-size: 10px;
   color: white;
@@ -279,6 +282,74 @@ a {
 .icon-audio {
   font-size: 10px;
   padding-right: 12px;
+}
+
+/* MAIN */ /* MAIN */
+/* MAIN */ /* MAIN */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  background-color: #080b12ff;
+}
+.button-header {
+  padding: 10px 30px;
+  background-color: #080b12ff;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-right: 5px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+.main {
+  overflow: scroll;
+  background-color: #141821ff;
+}
+.menu-main {
+  height: 20px;
+}
+.main-playlist {
+  display: flex;
+  flex-direction: column;
+}
+.main-title-section {
+  color: white;
+  padding-bottom: 20px;
+  padding-left: 21px;
+}
+.card-main {
+  width: calc(100% / 2);
+  padding: 5px;
+}
+.album-main {
+}
+.container-card {
+  display: flex;
+  flex-wrap: wrap;
+  /* column-gap: 8px; */
+  margin: 16px;
+  flex-shrink: 1;
+}
+.album-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+.main-title-album {
+  color: white;
+  font-weight: bold;
+  padding-top: 10px;
+}
+.main-subtitle-album {
+  color: grey;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 10px;
 }
 
 /* META VISUAL */
@@ -468,7 +539,7 @@ a {
     width: 16px;
     border-radius: 50%;
     position: absolute;
-
+    display: none;
     right: 0; /* display: none; */
     transform: translate(0, -6px);
   }
@@ -478,7 +549,7 @@ a {
     width: 16px;
     border-radius: 50%;
     position: absolute;
-
+    display: none;
     right: 0; /* display: none; */
     transform: translate(0, -6px);
   }
@@ -493,7 +564,6 @@ a {
     background-color: grey;
     width: 100%;
     margin: 0 10px;
-    min-width: 70px;
     position: relative;
   }
 }
@@ -517,5 +587,11 @@ a {
     display: flex;
     align-items: center;
     padding-right: 20px;
+  }
+
+  /* MAIN */
+  .card-main {
+    width: calc(100% / 4);
+    padding: 5px;
   }
 }
